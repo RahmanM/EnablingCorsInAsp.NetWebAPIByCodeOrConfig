@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">Asp.net Cross Origin Request with configurations in the Web Config file!</p>
+</div>
+
+@foreach (var value in ViewBag.Values)
+{
+   <div>@value</div>
+}
+
+
+    <div class="jumbotron" ng-controller="CorsController as ctrl">
+        <h1>Do Cross Origin Request..</h1>
+        <button id="clicky" ng-click="ctrl.ReadValues()">Click Me</button>
+        <ul >
+            <li ng-repeat="value in ctrl.values">{{value}}</li>
+        </ul>
+    </div>
+
+
